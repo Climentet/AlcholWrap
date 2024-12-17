@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contadores</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .usuarios-container {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .Persona {
+        background-color: #fff;
+        padding: 20px;
+        width: 280px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .contador-section {
+        margin: 10px 0;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    h2 {
+        margin: 10px 0;
+        color: #555;
+        display: inline-block;
+    }
+
+    .contador {
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 10px;
+        display: inline-block;
+    }
+
+    button {
+        margin: 5px;
+        padding: 5px 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .actualizar-btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .actualizar-btn:hover {
+        background-color: #45a049;
+    }
+</style>
+
+<body>
+
+    <div class="usuarios-container">
+        <!-- Usuario: DeiV -->
+        <div class="Persona" id="DeiV">
+            <h1>DeiV</h1>
+
+            <div class="contador-section">
+                <h2>kubats</h2>
+                <span class="contador" id="kubatsDeiV">0</span>
+                <button onclick="incrementar('kubatsDeiV')">+</button>
+                <button onclick="decrementar('kubatsDeiV')">-</button>
+                <button onclick="resetear('kubatsDeiV')">Reset</button>
+                <h3>Total Kubats: <span id="actualizarKubatsDeiV">0</span></h3>
+            </div>
+
+            <div class="contador-section">
+                <h2>xupits</h2>
+                <span class="contador" id="xupitsDeiV">0</span>
+                <button onclick="incrementar('xupitsDeiV')">+</button>
+                <button onclick="decrementar('xupitsDeiV')">-</button>
+                <button onclick="resetear('xupitsDeiV')">Reset</button>
+                <h3>Total Xupits: <span id="actualizarXupitsDeiV">0</span></h3>
+            </div>
+
+            <div class="contador-section">
+                <h2>rubias</h2>
+                <span class="contador" id="rubiasDeiV">0</span>
+                <button onclick="incrementar('rubiasDeiV')">+</button>
+                <button onclick="decrementar('rubiasDeiV')">-</button>
+                <button onclick="resetear('rubiasDeiV')">Reset</button>
+                <h3>Total Rubias: <span id="actualizarRubiasDeiV">0</span></h3>
+            </div>
+
+            <div class="contador-section">
+                <h2>vinos</h2>
+                <span class="contador" id="vinosDeiV">0</span>
+                <button onclick="incrementar('vinosDeiV')">+</button>
+                <button onclick="decrementar('vinosDeiV')">-</button>
+                <button onclick="resetear('vinosDeiV')">Reset</button>
+                <h3>Total Vinos: <span id="actualizarVinosDeiV">0</span></h3>
+            </div>
+
+            <button class="actualizar-btn" id="actualizarDeiV" onclick="actualizarContadores('DeiV')">Actualizar
+                Contadores</button>
+        </div>
+
+        <!-- Usuario: Berni -->
+        <div class="Persona" id="Berni">
+            <h1>Berni</h1>
+
+            <div class="contador-section">
+                <h2>kubats</h2>
+                <span class="contador" id="kubatsBerni">0</span>
+                <button onclick="incrementar('kubatsBerni')">+</button>
+                <button onclick="decrementar('kubatsBerni')">-</button>
+                <button onclick="resetear('kubatsBerni')">Reset</button>
+                <h3>Total Kubats: <span id="actualizarKubatsBerni">0</span></h3>
+            </div>
+
+            <div class="contador-section">
+                <h2>xupits</h2>
+                <span class="contador" id="xupitsBerni">0</span>
+                <button onclick="incrementar('xupitsBerni')">+</button>
+                <button onclick="decrementar('xupitsBerni')">-</button>
+                <button onclick="resetear('xupitsBerni')">Reset</button>
+                <h3>Total Xupits: <span id="actualizarXupitsBerni">0</span></h3>
+            </div>
+
+            <div class="contador-section">
+                <h2>rubias</h2>
+                <span class="contador" id="rubiasBerni">0</span>
+                <button onclick="incrementar('rubiasBerni')">+</button>
+                <button onclick="decrementar('rubiasBerni')">-</button>
+                <button onclick="resetear('rubiasBerni')">Reset</button>
+                <h3>Total Rubias:</Ri:a> <span id="actualizarRubiasBerni">0</span></h3>
+            </div>
+
+            <div class="contador-section">
+                <h2>vinos</h2>
+                <span class="contador" id="vinosBerni">0</span>
+                <button onclick="incrementar('vinosBerni')">+</button>
+                <button onclick="decrementar('vinosBerni')">-</button>
+                <button onclick="resetear('vinosBerni')">Reset</button>
+                <h3>Total Vinos: <span id="actualizarVinosBerni">0</span></h3>
+            </div>
+
+            <button class="actualizar-btn" id="actualizarBerni" onclick="actualizarContadores('Berni')">Actualizar
+                Contadores</button>
+        </div>
+
+        <!-- Usuario: Claiment -->
+        <div class="Persona" id="Claiment">
+            <h1>Claiment</h1>
+
+            <div class="contador-section">
+                <h2>kubats</h2>
+                <span class="contador" id="kubatsClaiment">0</span>
+                <button onclick="incrementar('kubatsClaiment')">+</button>
+                <button onclick="decrementar('kubatsClaiment')">-</button>
+                <button onclick="resetear('kubatsClaiment')">Reset</button>
+                <h3>Total Kubats: <span id="actualizarKubatsClaiment">0</span></h3>
+            </div>
+
+            <div class="contador-section">
+                <h2>xupits</h2>
+                <span class="contador" id="xupitsClaiment">0</span>
+                <button onclick="incrementar('xupitsClaiment')">+</button>
+                <button onclick="decrementar('xupitsClaiment')">-</button>
+                <button onclick="resetear('xupitsClaiment')">Reset</button>
+                <h3>Total Xupits: <span id="actualizarXupitsClaiment">0</span></h3>
+            </div>
+
+            <div class="contador-section">
+                <h2>rubias</h2>
+                <span class="contador" id="rubiasClaiment">0</span>
+                <button onclick="incrementar('rubiasClaiment')">+</button>
+                <button onclick="decrementar('rubiasClaiment')">-</button>
+                <button onclick="resetear('rubiasClaiment')">Reset</button>
+                <h3>Total Rubias: <span id="actualizarRubiasClaiment">0</span></h3>
+            </div>
+
+            <div class="contador-section">
+                <h2>vinos</h2>
+                <span class="contador" id="vinosClaiment">0</span>
+                <button onclick="incrementar('vinosClaiment')">+</button>
+                <button onclick="decrementar('vinosClaiment')">-</button>
+                <button onclick="resetear('vinosClaiment')">Reset</button>
+                <h3>Total Vinos: <span id="actualizarVinosClaiment">0</span></h3>
+            </div>
+
+            <button class="actualizar-btn" onclick="actualizarContadores('Claiment')" id="actualizarClaiment">Actualizar
+                Contadores</button>
+        </div>
+
+    </div>
+    <script>
+
+    // Función para incrementar un contador
+    function incrementar(id) {
+        const contador = document.getElementById(id);
+        contador.innerText = parseInt(contador.innerText) + 1;
+    }
+
+    // Función para decrementar un contador
+    function decrementar(id) {
+        const contador = document.getElementById(id);
+        if (parseInt(contador.innerText) > 0) {
+            contador.innerText = parseInt(contador.innerText) - 1;
+        }
+    }
+
+    // Función para resetear un contador
+    function resetear(id) {
+        const contador = document.getElementById(id);
+        contador.innerText = 0;
+    }
+
+    // Función para actualizar los contadores
+    async function actualizarContadores(usuario) {
+        const kubats = parseInt(document.getElementById(`kubats${usuario}`).innerText);
+        const xupits = parseInt(document.getElementById(`xupits${usuario}`).innerText);
+        const rubias = parseInt(document.getElementById(`rubias${usuario}`).innerText);
+        const vinos = parseInt(document.getElementById(`vinos${usuario}`).innerText);
+
+        // Preparar los datos a enviar
+        const datosActualizar = {
+            [usuario]: {
+                kubats,
+                xupits,
+                rubias,
+                vinos
+            }
+        };
+
+        try {
+            // Enviar los datos al servidor
+            const response = await fetch('/actualizar-contadores', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(datosActualizar)
+            });
+
+            if (response.ok) {
+                const resultado = await response.json();
+                console.log(resultado.mensaje);
+
+                // Actualizar contadores de actualización y resetear contadores principales
+                actualizarContadorDeActualizacion(`kubats${usuario}`, `actualizarKubats${usuario}`);
+                actualizarContadorDeActualizacion(`xupits${usuario}`, `actualizarXupits${usuario}`);
+                actualizarContadorDeActualizacion(`rubias${usuario}`, `actualizarRubias${usuario}`);
+                actualizarContadorDeActualizacion(`vinos${usuario}`, `actualizarVinos${usuario}`);
+            } else {
+                console.error('Error al actualizar contadores');
+            }
+        } catch (error) {
+            console.error('Error de red:', error);
+        }
+    }
+
+    // Función para sumar al contador de actualización y resetear el contador principal
+    function actualizarContadorDeActualizacion(idPrincipal, idActualizacion) {
+        const contadorPrincipal = document.getElementById(idPrincipal);
+        const contadorActualizacion = document.getElementById(idActualizacion);
+
+        // Sumar el valor del contador principal al de actualización
+        contadorActualizacion.innerText = 
+            parseInt(contadorActualizacion.innerText) + parseInt(contadorPrincipal.innerText);
+
+        // Resetear el contador principal
+        contadorPrincipal.innerText = 0;
+    }
+// Función para cargar los valores iniciales del servidor
+async function cargarValoresIniciales() {
+    try {
+        const response = await fetch('/contadores.json');
+        if (response.ok) {
+            const datos = await response.json();
+            actualizarHTMLDesdeJSON(datos);
+        } else {
+            console.error('Error al cargar los valores iniciales.');
+        }
+    } catch (error) {
+        console.error('Error de red al cargar valores iniciales:', error);
+    }
+}
+
+// Función para actualizar el HTML con valores del JSON
+function actualizarHTMLDesdeJSON(datos) {
+    Object.keys(datos).forEach(usuario => {
+        const contadores = datos[usuario];
+        document.getElementById(`actualizarKubats${usuario}`).innerText = contadores.kubats;
+        document.getElementById(`actualizarXupits${usuario}`).innerText = contadores.xupits;
+        document.getElementById(`actualizarRubias${usuario}`).innerText = contadores.rubias;
+        document.getElementById(`actualizarVinos${usuario}`).innerText = contadores.vinos;
+    });
+}
+
+// Llama a la función cuando la página se cargue
+document.addEventListener('DOMContentLoaded', cargarValoresIniciales);
+
+
+    </script>
+
+</body>
+
+</html>
